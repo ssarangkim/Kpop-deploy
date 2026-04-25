@@ -1,2 +1,0 @@
-# Kpop-page
-Kpop-page
