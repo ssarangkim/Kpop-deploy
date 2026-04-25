@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-POP REVOLUTION | The Global Phenomenon</title>
+    <meta name="description"
+        content="Discover the world of K-pop, its music, choreography, and the culture that took the world by storm.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        kpop: {
+                            blue: '#3b82f6',
+                            cyan: '#0ea5e9',
+                            indigo: '#6366f1',
+                            dark: '#020617',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass-thick {
+                @apply bg-white/60 backdrop-blur-[40px] border border-white/40;
+            }
+            .text-gradient-light {
+                @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600;
+            }
+            .bg-radial {
+                background: radial-gradient(circle at center, var(--tw-gradient-from) 0%, transparent 70%);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-outfit antialiased selection:bg-blue-500/30">
+
+    <!-- Decorative Background Elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+        <div
+            class="absolute -top-[10%] -right-[10%] w-[50%] h-[50%] bg-blue-200/50 blur-[120px] rounded-full animate-pulse-slow">
+        </div>
+        <div class="absolute -bottom-[10%] -left-[10%] w-[50%] h-[50%] bg-indigo-200/40 blur-[120px] rounded-full">
+        </div>
+        <div
+            class="absolute top-[20%] left-[10%] w-[30%] h-[30%] bg-cyan-200/30 blur-[100px] rounded-full animate-float">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header
+        class="fixed top-0 w-full z-50 transition-all duration-300 border-b border-black/5 bg-white/60 backdrop-blur-3xl">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg"
+                    alt="South Korea Flag" class="w-8 h-auto shadow-sm rounded-sm">
+                <div class="text-2xl font-bold tracking-tighter text-slate-900">
+                    K<span class="text-blue-600">WAVE</span>
+                </div>
+            </div>
+            <ul class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide text-slate-600">
+                <li><a href="#about" class="hover:text-blue-600 transition-colors">ABOUT</a></li>
+                <li><a href="#elements" class="hover:text-blue-600 transition-colors">ELEMENTS</a></li>
+                <li><a href="#explore" class="hover:text-blue-600 transition-colors">EXPLORE</a></li>
+            </ul>
+            <button
+                class="px-5 py-2 rounded-full glass-thick hover:bg-white/80 transition-all text-sm font-bold border-white/40 shadow-lg text-blue-600">
+                JOIN NOW
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="assets/hero.png" alt="Hero" class="w-full h-full object-cover opacity-10">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-slate-50/50"></div>
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div
+                        class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full glass-thick border-blue-500/20 text-xs font-bold tracking-widest text-blue-600 uppercase shadow-md">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                        </span>
+                        <span>Global Phenomenon</span>
+                    </div>
+                    <h1 class="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter text-slate-900">
+                        THE ART OF <br>
+                        <span class="text-gradient-light">K-POP</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-600 max-w-lg leading-relaxed font-medium">
+                        전 세계를 매료시킨 강렬한 리듬, 눈을 뗄 수 없는 퍼포먼스.
+                        대한민국의 열정이 빚어낸 새로운 문화의 정점, K-pop의 세계로 당신을 초대합니다.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#about"
+                            class="px-8 py-4 rounded-full bg-blue-600 text-white font-bold hover:shadow-[0_10px_30px_rgba(37,99,235,0.3)] transition-all transform hover:-translate-y-1">
+                            Experience More
+                        </a>
+                        <a href="#elements"
+                            class="px-8 py-4 rounded-full glass-thick font-bold hover:bg-white/80 transition-all shadow-lg text-slate-700">
+                            Learn Elements
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hidden lg:block relative">
+                    <div class="absolute -inset-10 bg-blue-400/20 rounded-full blur-[80px] animate-pulse-slow"></div>
+                    <img src="assets/dance.png" alt="Dance"
+                        class="relative rounded-[2.5rem] border-8 border-white/50 shadow-2xl animate-float">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-32 relative">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center space-y-6">
+                    <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">문화적 혁명을 주도하다</h2>
+                    <div class="h-2 w-24 bg-blue-600 mx-auto rounded-full"></div>
+                    <p class="text-xl text-slate-600 leading-relaxed font-medium">
+                        K-pop은 단순히 한국의 대중음악을 넘어, 패션, 기술, 그리고 글로벌 팬덤 문화가 집약된 종합적인 예술 플랫폼입니다.
+                        매년 전 세계 수백만 명의 팬들이 K-pop을 통해 서로 소통하고 꿈을 키우고 있습니다.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 mt-24">
+                    <div
+                        class="glass-thick p-10 rounded-[2.5rem] space-y-5 hover:border-blue-500/30 transition-all group shadow-xl border-white/60">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-blue-600/10 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-900">Visual Music</h3>
+                        <p class="text-slate-600 font-medium leading-relaxed">듣는 즐거움을 넘어 보는 즐거움까지. 화려한 뮤직비디오와 비주얼 스토리텔링의
+                            정점을 보여줍니다.</p>
+                    </div>
+
+                    <div
+                        class="glass-thick p-10 rounded-[2.5rem] space-y-5 hover:border-blue-500/30 transition-all group shadow-xl border-white/60">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-blue-600/10 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-900">Performance</h3>
+                        <p class="text-slate-600 font-medium leading-relaxed">오랜 기간 훈련된 아티스트들의 완벽한 군무는 K-pop의 가장 큰 차별점이며
+                            매력 포인트입니다.</p>
+                    </div>
+
+                    <div
+                        class="glass-thick p-10 rounded-[2.5rem] space-y-5 hover:border-blue-500/30 transition-all group shadow-xl border-white/60">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-blue-600/10 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-900">Global Fandom</h3>
+                        <p class="text-slate-600 font-medium leading-relaxed">국경을 초월한 강력한 팬덤 문화는 K-pop이 세계 무대에서 살아 움직이게
+                            하는 원동력입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="explore" class="py-32 overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="relative rounded-[3rem] overflow-hidden shadow-2xl">
+                    <img src="assets/hero.png" alt="Footer CTA" class="w-full h-[500px] object-cover opacity-40">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-indigo-700/90 flex flex-col items-center justify-center text-center p-12">
+                        <h2 class="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">시대를 앞서가는 <br>새로운 물결
+                        </h2>
+                        <p class="text-white/80 text-xl mb-12 max-w-2xl font-medium">당신도 이 글로벌 혁명의 일부가 될 준비가 되었나요? 지금 바로
+                            K-WAVE 커뮤니티에 합류하세요.</p>
+                        <button
+                            class="px-12 py-6 rounded-full bg-white text-blue-700 font-black text-xl hover:bg-slate-50 transition-all shadow-2xl hover:scale-105 active:scale-95">
+                            JOIN THE MOVEMENT
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-16 border-t border-black/5 bg-slate-100/50">
+        <div
+            class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+            <div class="flex items-center space-x-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" alt="Flag"
+                    class="w-6 h-auto opacity-70">
+                <div class="text-xl font-bold tracking-tighter text-slate-900">
+                    K<span class="text-blue-600">WAVE</span>
+                </div>
+            </div>
+            <div class="text-slate-500 text-sm font-medium">
+                &copy; 2026 K-WAVE. Inspired by the Global K-Culture Revolution.
+            </div>
+            <div class="flex space-x-8 text-slate-500 font-semibold text-sm">
+                <a href="#" class="hover:text-blue-600 transition-colors">Privacy</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">Terms</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple header background change on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-3');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-3');
+            }
+        });
+    </script>
+</body>
+
+</html>
